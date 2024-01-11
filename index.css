@@ -1,7 +1,7 @@
 /* Button 1*/
 
 .button {
-		border-radius: 100;
+		border-radius: 90;
 		cursor: pointer;
 		display: block; /* buttom form */ 
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
