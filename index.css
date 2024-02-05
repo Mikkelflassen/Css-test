@@ -1,5 +1,22 @@
 /* Button 1*/
 
+body{
+    background-color: #ffdede;
+}
+
+.text{
+    -webkit-text-fill-color: brown;
+    font-size:clamp(5px, 5vw, 40px); /* (xxPX = minimum size, Xvw = change, xxPx = maximum size)
+    }
+
+
+
+.button-group {
+    display: flex;
+    justify-content: left; /* Center buttons horizontally */
+    margin-bottom: 20px; /* Add space between button groups */
+}
+
 .button {
 		border-radius: 9px;
 		cursor: pointer;
@@ -17,7 +34,7 @@
         border: solid 2px;
 		margin-bottom: rem;  
         margin-top: rem; 
-        margin: 2rem; /* spacing to everything*/
+        margin: 30px; /* spacing to everything*/
 		color: #212121; 
         max-width: 100px;
         
@@ -25,17 +42,17 @@
 
 .button:hover {
     box-shadow: inset 0 0 0 2px #f9a87c; /* box outline color swift when hover*/
-			color: #f9a87c !important;  /* text color swift when hover*/
+			color: #f9a87c ;  /* text color swift when hover*/
             text-decoration-line : #212121;
 }
 /* Button 2*/
 
     .button2 {
-    margin: 10px,20px;
+    margin: 30px;
     background-color: #3498db; 
     color: #212121;
     border: solid 2.5px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 6px;
     font-size: 16px;
     position: relative;
@@ -73,17 +90,15 @@
     }
 
 
-    .text{
-    -webkit-text-fill-color: brown;
-    }
+    
 
     .button3 {
         background-color: #3498db;
-        border: solid 25px;
+        border: solid 2px black;
         margin: 20px;
         display: inline-block; /* Change display to inline-block */
         padding: 10px 20px; /* Add padding to create space inside the box */
-        font-size: clamp(5px, 10vw, 20px);
+       
         text-align: center; /* Center the text */
         text-decoration: none; /* Remove underline from the anchor */
         color: white; /* Set text color */
