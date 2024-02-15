@@ -1,2 +1,5 @@
 
-const helloWorld = console.log("hello world")
+function hey() {
+
+ console.log("hello world");
+}
