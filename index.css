@@ -3,42 +3,45 @@
 body{
     background-color: #ffdede;
 }
+*{
+margin:10px
+}
 
 .text{
     -webkit-text-fill-color: brown;
-    font-size:clamp(5px, 5vw, 40px); /* (xxPX = minimum size, Xvw = change, xxPx = maximum size)
+    font-size:clamp(5px, 5vw, 40px); /* (xxPX = minimum size, Xvw = change, xxPx = maximum size) */
     }
 
 
 
-.button-group {
-    display: flex;
-    justify-content: left; /* Center buttons horizontally */
-    margin-bottom: 20px; /* Add space between button groups */
-}
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow buttons to wrap when window size decreases */
+    }
 
-.button {
-		border-radius: 9px;
-		cursor: pointer;
-		display: block; /* buttom form */ 
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 1rem; /* text size */
-		font-weight: 900; /* text padding */
-		letter-spacing: 0.075em; /* letter spacing  */
-		height: 0px;  /* box height  */ /* not need if you have padding */
-		line-height: 0px;  /* text spacing inside the box */
-		padding:  2rem; /* space between text and box border */
-		text-align: center;
-		background-color: rgb(222, 105, 105);
-		text-transform: uppercase;
-        border: solid 2px;
-		margin-bottom: rem;  
-        margin-top: rem; 
-        margin: 30px; /* spacing to everything*/
-		color: #212121; 
-        max-width: 100px;
-        
-}
+    .button {
+        border-radius: 9px; /* Set the border radius for rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        display: block; /* Set the display to block to make it a block-level element */
+        font-family: "Source Sans Pro", Helvetica, sans-serif; /* Set the font family */
+        font-size: 1rem; /* Set the font size */
+        font-weight: 900; /* Set the font weight */
+        letter-spacing: 0.075em; /* Set the letter spacing */
+        height: 0px; /* Set the height of the element */
+        line-height: 0px; /* Set the line height of the text */
+        padding: 2rem; /* Set the padding */
+        text-align: center; /* Center the text */
+        background-color: rgb(222, 105, 105); /* Set the background color */
+        text-transform: uppercase; /* Transform text to uppercase */
+        border: solid 2px; /* Set the border style */
+        margin-bottom: rem; /* Set the bottom margin */
+        margin-top: rem; /* Set the top margin */
+        margin: 30px; /* Set the margin for all sides (overrides margin-top and margin-bottom) */
+        color: #212121; /* Set the text color */
+        max-width: 100px; /* Set the maximum width */
+    }
+    
 
 .button:hover {
     box-shadow: inset 0 0 0 2px #f9a87c; /* box outline color swift when hover*/
@@ -47,19 +50,22 @@ body{
 }
 /* Button 2*/
 
-    .button2 {
-    margin: 20px;
-    background-color: #3498db; 
-    color: #212121;
-    border: solid 2.5px;
-    padding: 15px 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s, border-color 0.3s;
-    cursor: pointer;
-    }
+.button2 {
+    margin: 20px auto; /* Center the button horizontally */
+    background-color: #3498db; /* Set the background color */
+    color: #212121; /* Set the text color */
+    border: solid 2.5px; /* Set the border style */
+    padding: 15px 20px; /* Set the padding */
+    border-radius: 6px; /* Set the border radius for rounded corners */
+    font-size: 16px; /* Set the font size */
+    position: relative; /* Keep the position relative */
+    z-index: 1; /* Set a lower z-index compared to other elements */
+    display: inline-block; /* Ensure it respects other inline elements */
+    transition: color 0.3s, border-color 0.3s; /* Apply transition effects */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
   
     /* Text styles */
     .button2 span {
@@ -90,24 +96,36 @@ body{
     }
 
 
-    
+     
 
-    .button3 {
-        background-color: #3498db;
-        border: solid 2px black;
-        margin: 20px;
-        display: inline-block; /* Change display to inline-block */
-        padding: 10px 20px; /* Add padding to create space inside the box */
-       
-        text-align: center; /* Center the text */
-        text-decoration: none; /* Remove underline from the anchor */
-        color: white; /* Set text color */
-        justify-content: center;
-        align-items: center; /* Center content vertically */
+      
+   /* Styles for the third button */
+.button3 {
+    background-color: #3498db; /* Button background color */
+    border: solid 2px black; /* Border style */
+    margin: 20px; /* Margin */
+    display: inline-block; /* Display as inline-block */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default text color */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+    
+    @media screen and (min-width: 1000px) {
+        /* Media query for screens with a minimum width of 1000 pixels */
+        .button3 {
+            color: rgb(0, 0, 0); /* Change text color when window width is smaller */
+            visibility: visible; /* Ensure the button is visible */
+        }
     }
     
+    
+    
+
     .button3:hover {
         background-color: #296993; /* Change background color on hover */
     }
 
-    
